@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title><%= title %></title>
+
+    <link rel="stylesheet" href="/css/counter.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/js/result.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron" style="margin-top: 10%">
+            <div class="row justify-content-around">
+                <div class="card col-sm-8">
+                    <div class="card-body">
+                        <h3 class="card-title">Survey Results!</h3>
+                            <div class="form-group row">
+                                <label for="name" class="col-sm-4 col-form-label">Your Name:</label>
+                                <div class="col-sm-8">
+                                    <p><%= result.name %></p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputLocation" class="col-sm-4 col-form-label">Dojo Location:</label>
+                                <div class="col-sm-8">
+                                    <p><%= result.location %></p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputLanguage" class="col-sm-4 col-form-label">Favorite Language:</label>
+                                <div class="col-sm-8">
+                                    <p><%= result.favoriteLanguage %></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment" class="form-label">Comment (optional):</label>
+                                <p><%= result.comment %></p>
+                            </div>
+                        <button class="btn btn-info float-right" id="goBack">Go Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

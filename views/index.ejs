@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title%></title>
+
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/js/index.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron" style="margin-top: 10%">
+            <div class="row justify-content-around">
+                <div class="card col-sm-8">
+                    <div class="card-body">
+                        <h3 class="card-title">Dojo Survey!</h3>
+                        <form action="result" method="POST">
+                            <div class="form-group row">
+                                <label for="name" class="col-sm-4 col-form-label">Your Name:</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" name="name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputLocation" class="col-sm-4 col-form-label">Dojo Location:</label>
+                                <div class="col-sm-8">
+                                    <select id="inputLocation" class="form-control no-radius" name="location">
+                                        <option selected disabled>Choose...</option>
+                                        <option value="ArlingtonVA">Arlington, VA</option>
+                                        <option value="BerkeleyCA">Berkeley, CA</option>
+                                        <option value="BoiseID">Boise, ID</option>
+                                        <option value="ChicagoIL">Chicago, IL</option>
+                                        <option value="DallasTX">Dallas, TX</option>
+                                        <option value="LosAngelesCA">Los Angeles, CA</option>
+                                        <option value="OrangeCountyCA">Orange County, CA</option>
+                                        <option value="SeattleWA">Seattle, WA</option>
+                                        <option value="SiliconValleyCA">Silicon Valley, CA</option>
+                                        <option value="TulsaOK">Tulsa, OK</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputLanguage" class="col-sm-4 col-form-label">Favorite Language:</label>
+                                <div class="col-sm-8">
+                                    <select id="inputLanguage" class="form-control" name="favoriteLanguage">
+                                        <option selected disabled>Choose...</option>
+                                        <option value="C#">C#</option>
+                                        <option value="Python">Python</option>
+                                        <option value="Java">Java</option>
+                                        <option value="Rust">Rust</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment" class="form-label">Comment (optional):</label>
+                                <textarea type="text" class="form-control" name="comment" rows="4"></textarea>
+                            </div>
+                            <input type="submit" class="btn btn-info float-right" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
